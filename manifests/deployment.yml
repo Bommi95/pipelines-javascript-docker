@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bommipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bommipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: bommipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bommipipelinesjavascriptdocker 
+          image: bommi555.azurecr.io/bommipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
